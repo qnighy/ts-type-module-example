@@ -2,7 +2,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "tsc": "tsc"
+    "start-ts": "node dist-ts/index.js",
+    "start-webpack": "node dist-webpack/index.js",
+    "tsc": "tsc",
+    "webpack": "webpack"
   },
   "dependencies": {
     "tslib": "^2.1.0"

@@ -6,7 +6,9 @@ export default {
   "mode": "development",
   "context": path.resolve(__dirname, "./src"),
   "target": "node",
-  "entry": "./index",
+  "entry": {
+    "index": "./index",
+  },
   "resolve": {
     "extensions": ['.wasm', '.mjs', '.js', '.jsx', '.ts', '.tsx', '.json'],
   },
