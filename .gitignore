@@ -117,3 +117,4 @@ dist
 
 # Custom
 /dist-ts
+/dist-webpack
