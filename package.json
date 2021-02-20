@@ -9,11 +9,14 @@
     "webpack": "webpack"
   },
   "dependencies": {
+    "react": "^17.0.1",
     "tslib": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
+    "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.12.17",
+    "@types/react": "^17.0.2",
     "babel-loader": "^8.2.2",
     "babel-plugin-replace-import-extension": "^1.1.0",
     "ts-node": "^9.1.1",

@@ -39,6 +39,13 @@
     jsesc "^2.5.1"
     source-map "^0.5.0"
 
+"@babel/helper-annotate-as-pure@^7.10.4", "@babel/helper-annotate-as-pure@^7.12.13":
+  version "7.12.13"
+  resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.12.13.tgz#0f58e86dfc4bb3b1fcd7db806570e177d439b6ab"
+  integrity sha512-7YXfX5wQ5aYM/BOlbSccHDbuXXFPxeoUmfWtz8le2yTkTZc+BxsiEnENFoi2SlmA8ewDkG2LgIMIVzzn2h8kfw==
+  dependencies:
+    "@babel/types" "^7.12.13"
+
 "@babel/helper-create-class-features-plugin@^7.12.17":
   version "7.12.17"
   resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.12.17.tgz#704b69c8a78d03fb1c5fcc2e7b593f8a65628944"
@@ -102,7 +109,7 @@
   dependencies:
     "@babel/types" "^7.12.13"
 
-"@babel/helper-plugin-utils@^7.12.13":
+"@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.12.13":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.12.13.tgz#174254d0f2424d8aefb4dd48057511247b0a9eeb"
   integrity sha512-C+10MXCXJLiR6IeG9+Wiejt9jmtFpxUc3MQqCmPY8hfCjyUGl9kT+B2okzEZrtykiwrc4dbCPdDoz0A/HQbDaA==
@@ -164,12 +171,52 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.17.tgz#bc85d2d47db38094e5bb268fc761716e7d693848"
   integrity sha512-r1yKkiUTYMQ8LiEI0UcQx5ETw5dpTLn9wijn9hk6KkTtOK95FndDN10M+8/s6k/Ymlbivw0Av9q4SlgF80PtHg==
 
+"@babel/plugin-syntax-jsx@^7.12.13":
+  version "7.12.13"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.12.13.tgz#044fb81ebad6698fe62c478875575bcbb9b70f15"
+  integrity sha512-d4HM23Q1K7oq/SLNmG6mRt85l2csmQ0cHRaxRXjKW0YFdEXqlZ5kzFQKH5Uc3rDJECgu+yCRgPkG04Mm98R/1g==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.12.13"
+
 "@babel/plugin-syntax-typescript@^7.12.13":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.12.13.tgz#9dff111ca64154cef0f4dc52cf843d9f12ce4474"
   integrity sha512-cHP3u1JiUiG2LFDKbXnwVad81GvfyIOmCD6HIEId6ojrY0Drfy2q1jw7BwN7dE84+kTnBjLkXoL3IEy/3JPu2w==
   dependencies:
     "@babel/helper-plugin-utils" "^7.12.13"
+
+"@babel/plugin-transform-react-display-name@^7.12.13":
+  version "7.12.13"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-display-name/-/plugin-transform-react-display-name-7.12.13.tgz#c28effd771b276f4647411c9733dbb2d2da954bd"
+  integrity sha512-MprESJzI9O5VnJZrL7gg1MpdqmiFcUv41Jc7SahxYsNP2kDkFqClxxTZq+1Qv4AFCamm+GXMRDQINNn+qrxmiA==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.12.13"
+
+"@babel/plugin-transform-react-jsx-development@^7.12.12":
+  version "7.12.17"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-development/-/plugin-transform-react-jsx-development-7.12.17.tgz#f510c0fa7cd7234153539f9a362ced41a5ca1447"
+  integrity sha512-BPjYV86SVuOaudFhsJR1zjgxxOhJDt6JHNoD48DxWEIxUCAMjV1ys6DYw4SDYZh0b1QsS2vfIA9t/ZsQGsDOUQ==
+  dependencies:
+    "@babel/plugin-transform-react-jsx" "^7.12.17"
+
+"@babel/plugin-transform-react-jsx@^7.12.13", "@babel/plugin-transform-react-jsx@^7.12.17":
+  version "7.12.17"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.12.17.tgz#dd2c1299f5e26de584939892de3cfc1807a38f24"
+  integrity sha512-mwaVNcXV+l6qJOuRhpdTEj8sT/Z0owAVWf9QujTZ0d2ye9X/K+MTOTSizcgKOj18PGnTc/7g1I4+cIUjsKhBcw==
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.12.13"
+    "@babel/helper-module-imports" "^7.12.13"
+    "@babel/helper-plugin-utils" "^7.12.13"
+    "@babel/plugin-syntax-jsx" "^7.12.13"
+    "@babel/types" "^7.12.17"
+
+"@babel/plugin-transform-react-pure-annotations@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-pure-annotations/-/plugin-transform-react-pure-annotations-7.12.1.tgz#05d46f0ab4d1339ac59adf20a1462c91b37a1a42"
+  integrity sha512-RqeaHiwZtphSIUZ5I85PEH19LOSzxfuEazoY7/pWASCAIBuATQzpSVD+eT6MebeeZT2F4eSL0u4vw6n4Nm0Mjg==
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.10.4"
+    "@babel/helper-plugin-utils" "^7.10.4"
 
 "@babel/plugin-transform-typescript@^7.12.17":
   version "7.12.17"
@@ -179,6 +226,17 @@
     "@babel/helper-create-class-features-plugin" "^7.12.17"
     "@babel/helper-plugin-utils" "^7.12.13"
     "@babel/plugin-syntax-typescript" "^7.12.13"
+
+"@babel/preset-react@^7.12.13":
+  version "7.12.13"
+  resolved "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.12.13.tgz#5f911b2eb24277fa686820d5bd81cad9a0602a0a"
+  integrity sha512-TYM0V9z6Abb6dj1K7i5NrEhA13oS5ujUYQYDfqIBXYHOc2c2VkFgc+q9kyssIyUfy4/hEwqrgSlJ/Qgv8zJLsA==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.12.13"
+    "@babel/plugin-transform-react-display-name" "^7.12.13"
+    "@babel/plugin-transform-react-jsx" "^7.12.13"
+    "@babel/plugin-transform-react-jsx-development" "^7.12.12"
+    "@babel/plugin-transform-react-pure-annotations" "^7.12.1"
 
 "@babel/preset-typescript@^7.12.17":
   version "7.12.17"
@@ -257,6 +315,19 @@
   version "14.14.31"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.31.tgz#72286bd33d137aa0d152d47ec7c1762563d34055"
   integrity sha512-vFHy/ezP5qI0rFgJ7aQnjDXwAMrG0KqqIH7tQG5PPv3BWBayOPIQNBjVc/P6hhdZfMx51REc6tfDNXHUio893g==
+
+"@types/prop-types@*":
+  version "15.7.3"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
+  integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
+
+"@types/react@^17.0.2":
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.2.tgz#3de24c4efef902dd9795a49c75f760cbe4f7a5a8"
+  integrity sha512-Xt40xQsrkdvjn1EyWe1Bc0dJLcil/9x2vAuW7ya+PuQip4UYUaXyhzWmAbwRsdMgwOFHpfp7/FFZebDU6Y8VHA==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
 
 "@webassemblyjs/ast@1.11.0":
   version "1.11.0"
@@ -562,6 +633,11 @@ cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+csstype@^3.0.2:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.6.tgz#865d0b5833d7d8d40f4e5b8a6d76aea3de4725ef"
+  integrity sha512-+ZAmfyWMT7TiIlzdqJgjMb7S4f1beorDbWbsocyK4RaiqA5RTX3K14bnBWmmA9QEM0gRdsjyyrEmcyga8Zsxmw==
+
 debug@^4.1.0:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
@@ -799,7 +875,7 @@ jest-worker@^26.6.2:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-js-tokens@^4.0.0:
+"js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
@@ -864,6 +940,13 @@ lodash@^4.17.19:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
+loose-envify@^1.1.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
+  integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
+  dependencies:
+    js-tokens "^3.0.0 || ^4.0.0"
+
 make-dir@^3.0.2, make-dir@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"
@@ -924,6 +1007,11 @@ npm-run-path@^4.0.1:
   integrity sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==
   dependencies:
     path-key "^3.0.0"
+
+object-assign@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+  integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
 onetime@^5.1.2:
   version "5.1.2"
@@ -991,6 +1079,14 @@ randombytes@^2.1.0:
   integrity sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==
   dependencies:
     safe-buffer "^5.1.0"
+
+react@^17.0.1:
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
+  integrity sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 rechoir@^0.7.0:
   version "0.7.0"

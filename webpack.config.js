@@ -23,7 +23,15 @@ export default {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-typescript"],
+            presets: [
+              [
+                "@babel/preset-react",
+                {
+                  "runtime": "automatic"
+                },
+              ],
+              "@babel/preset-typescript",
+            ],
             plugins: [
               ["replace-import-extension", { "extMapping": { ".js": "" }}],
             ],

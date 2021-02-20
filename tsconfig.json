@@ -6,7 +6,7 @@
     "lib": ["ES2015", "DOM"],
     "allowJs": true,
     "checkJs": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -27,5 +27,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "include": ["src/**.ts", "src/**.tsx"],
 }
