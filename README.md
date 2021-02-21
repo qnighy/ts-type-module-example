@@ -206,3 +206,58 @@ error Command failed with exit code 1.
 </details>
 
 You need to [set `extensionsToTreatAsEsm` to `[".ts"]`](https://github.com/facebook/jest/pull/10823), but the option is only available in the coming Jest 27.
+
+### Translating extensions
+
+As of Jest 27.0.0-next.3, there doesn't seem to exist a way to resolve `foo.js` as `foo.ts`.
+
+<details><summary>Error example</summary>
+
+```
+(node:939) ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ PASS  src/square.test.ts
+ FAIL  src/square42.test.ts
+  ● Test suite failed to run
+
+    Error [ERR_VM_MODULE_LINKING_ERRORED]: Linking has already failed for the provided module
+
+          at async Promise.all (index 0)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.286 s, estimated 1 s
+Ran all test suites.
+```
+
+</details>
+
+<details><summary>Error example</summary>
+
+```
+(node:1052) ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ FAIL  src/square.test.ts
+  ● Test suite failed to run
+
+    Cannot find module './square.js' from 'square.test.ts'
+
+      at Resolver.resolveModule (../node_modules/jest-resolve/build/index.js:311:11)
+
+ FAIL  src/square42.test.ts
+  ● Test suite failed to run
+
+    Cannot find module './square42.js' from 'square42.test.ts'
+
+      at Resolver.resolveModule (../node_modules/jest-resolve/build/index.js:311:11)
+
+Test Suites: 2 failed, 2 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.288 s, estimated 1 s
+Ran all test suites.
+error Command failed with exit code 1.
+```
+
+</details>
