@@ -4,3 +4,5 @@ import { foo } from "./foo.js";
 
 console.log("foo = ", foo);
 // console.log("bar = ", bar);
+
+export type T = 42;

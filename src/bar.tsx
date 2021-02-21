@@ -1,1 +1,1 @@
-export const bar = <div />;
+export const bar: React.ReactElement = <div />;

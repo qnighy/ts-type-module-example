@@ -5,3 +5,5 @@ describe("foo", () => {
     expect(foo).toBe(42);
   });
 });
+
+export type T = 42;
