@@ -1,5 +1,4 @@
-// TODO: use ./square.js
-import { square } from "./square";
+import { square } from "./square.js";
 
 describe("square", () => {
   it("squares the number", () => {

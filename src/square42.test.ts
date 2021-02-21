@@ -1,5 +1,4 @@
-// TODO: use ./square42.js
-import { square42 } from "./square42";
+import { square42 } from "./square42.js";
 
 describe("square42", () => {
   it("returns 1764", () => {

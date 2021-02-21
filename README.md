@@ -209,7 +209,7 @@ You need to [set `extensionsToTreatAsEsm` to `[".ts"]`](https://github.com/faceb
 
 ### Translating extensions
 
-As of Jest 27.0.0-next.3, there doesn't seem to exist a way to resolve `foo.js` as `foo.ts`.
+By default, Jest only tries `foo.js`, `foo.js.js` or `foo.js.ts` for `foo.js` request.
 
 <details><summary>Error example</summary>
 
@@ -261,3 +261,15 @@ error Command failed with exit code 1.
 ```
 
 </details>
+
+To resolve `foo.js` as `foo.ts`, you can [use `moduleNameMapper` to strip the `.js` extension](https://github.com/facebook/jest/issues/9430#issuecomment-782835408).
+
+```javascript
+export default {
+  // ...
+  moduleNameMapper: {
+    "^(.*)\\.js$": "$1",
+  },
+  // ...
+};
+```
