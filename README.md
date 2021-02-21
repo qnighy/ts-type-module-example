@@ -26,10 +26,10 @@ In this repository, **we use `foo.js` to import `foo.ts`** because both TypeScri
 
 ```
 # TypeScript's error for an attempt to import .ts files
-src/index.ts:1:21 - error TS2691: An import path cannot end with a '.ts' extension. Consider importing './foo' instead.
+src/index.ts:1:21 - error TS2691: An import path cannot end with a '.ts' extension. Consider importing './square' instead.
 
-1 import { foo } from "./foo.ts";
-                      ~~~~~~~~~~
+1 import { square } from "./square.ts";
+                         ~~~~~~~~~~~~~
 
 
 Found 1 error.
@@ -43,10 +43,10 @@ As stated above, TypeScript can resolve `*.js` imports as `*.ts` or `*.tsx` file
 
 ```typescript
 // index.ts
-import { foo } from "./foo.js"; // resolves to foo.ts
+import { square } from "./square.js"; // resolves to square.ts
 ```
 
-When transpiled, `foo.ts` turns into `foo.js` so Node.js straightforwardly resolves the import.
+When transpiled, `square.ts` turns into `square.js` so Node.js straightforwardly resolves the import.
 
 ### Problems with react-jsx
 
@@ -96,28 +96,28 @@ runtime modules 274 bytes 1 module
 ./index.ts 194 bytes [built] [code generated]
 
 ERROR in ./index.ts 1:0-31
-Module not found: Error: Can't resolve './foo.js' in '$CWD/src'
-resolve './foo.js' in '$CWD/src'
+Module not found: Error: Can't resolve './square.js' in '$CWD/src'
+resolve './square.js' in '$CWD/src'
   using description file: $CWD/package.json (relative path: ./src)
-    using description file: $CWD/package.json (relative path: ./src/foo.js)
+    using description file: $CWD/package.json (relative path: ./src/square.js)
       no extension
-        $CWD/src/foo.js doesn't exist
+        $CWD/src/square.js doesn't exist
       .wasm
-        $CWD/src/foo.js.wasm doesn't exist
+        $CWD/src/square.js.wasm doesn't exist
       .mjs
-        $CWD/src/foo.js.mjs doesn't exist
+        $CWD/src/square.js.mjs doesn't exist
       .js
-        $CWD/src/foo.js.js doesn't exist
+        $CWD/src/square.js.js doesn't exist
       .jsx
-        $CWD/src/foo.js.jsx doesn't exist
+        $CWD/src/square.js.jsx doesn't exist
       .ts
-        $CWD/src/foo.js.ts doesn't exist
+        $CWD/src/square.js.ts doesn't exist
       .tsx
-        $CWD/src/foo.js.tsx doesn't exist
+        $CWD/src/square.js.tsx doesn't exist
       .json
-        $CWD/src/foo.js.json doesn't exist
+        $CWD/src/square.js.json doesn't exist
       as directory
-        $CWD/src/foo.js doesn't exist
+        $CWD/src/square.js doesn't exist
 ```
 
 </details>
@@ -167,7 +167,7 @@ $ node --experimental-vm-modules node_modules/.bin/jest --config=jest-babel.conf
 (Use `node --trace-warnings ...` to show where the warning was created)
 (node:27654) ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any time
 (Use `node --trace-warnings ...` to show where the warning was created)
- FAIL  src/foo.test.ts
+ FAIL  src/square.test.ts
   ● Test suite failed to run
 
     Jest encountered an unexpected token
@@ -187,8 +187,8 @@ $ node --experimental-vm-modules node_modules/.bin/jest --config=jest-babel.conf
 
     Details:
 
-    $CWD/src/foo.test.ts:1
-    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,global,jest){import { foo } from "./foo";
+    $CWD/src/square.test.ts:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,global,jest){import { square } from "./square";
                                                                                              ^^^^^^
 
     SyntaxError: Cannot use import statement outside a module
