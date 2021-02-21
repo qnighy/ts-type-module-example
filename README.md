@@ -65,7 +65,7 @@ internal/process/esm_loader.js:74
     internalBinding('errors').triggerUncaughtException(
                               ^
 
-Error [ERR_MODULE_NOT_FOUND]: Cannot find module '$CWD/node_modules/react/jsx-runtime' imported from $CWD/dist-ts/bar.js
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '$CWD/node_modules/react/jsx-runtime' imported from $CWD/dist-ts/App.js
 Did you mean to import react/jsx-runtime.js?
     at finalizeResolution (internal/modules/esm/resolve.js:276:11)
     at moduleResolve (internal/modules/esm/resolve.js:699:10)
