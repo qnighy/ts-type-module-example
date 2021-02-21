@@ -149,7 +149,9 @@ $ node --loader ts-node/esm src/index.js
 
 ## Jest (with ts-jest)
 
-For whatever reason, it seems ts-jest just works.
+For whatever reason, it seems ts-jest just works with Jest 26.
+
+However, this is no longer the case with Jest 27, which comes with the proper support for ES Modules. See the next section below.
 
 ## Jest (with babel-jest)
 

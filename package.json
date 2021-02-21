@@ -6,7 +6,7 @@
     "start-webpack": "node dist-webpack/index.js",
     "start-ts-node": "node --loader ts-node/esm src/index.js",
     "test-babel": "node --experimental-vm-modules node_modules/.bin/jest --config=jest-babel.config.ts",
-    "test-ts": "jest --config=jest-ts.config.ts",
+    "test-ts": "node --experimental-vm-modules node_modules/.bin/jest --config=jest-ts.config.ts",
     "tsc": "tsc",
     "webpack": "webpack"
   },
