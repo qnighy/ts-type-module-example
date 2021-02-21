@@ -1,3 +1,4 @@
+// TODO: use ./square.js
 import { square } from "./square";
 
 describe("square", () => {
