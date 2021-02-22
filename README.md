@@ -147,12 +147,6 @@ You need a different command to enable [the experimental ESM support](https://gi
 $ node --loader ts-node/esm src/index.js
 ```
 
-## Jest (with ts-jest)
-
-For whatever reason, it seems ts-jest just works with Jest 26.
-
-However, this is no longer the case with Jest 27, which comes with the proper support for ES Modules. See the next section below.
-
 ## Jest (with babel-jest)
 
 You need to [pass `--experimental-vm-modules` to Node.js](https://jestjs.io/docs/en/ecmascript-modules), but that's not enough.
@@ -273,3 +267,67 @@ export default {
   // ...
 };
 ```
+
+## Jest (with ts-jest)
+
+For whatever reason, it seems ts-jest just works with Jest 26.
+
+However, this is no longer the case with Jest 27, which comes with the proper support for ES Modules. See the previous section below.
+
+Note that, you'll need the following [additional configuration](https://kulshekhar.github.io/ts-jest/docs/next/guides/esm-support):
+
+```javascript
+  globals: {
+    'ts-jest': {
+      useESM: true,
+    },
+  },
+```
+
+Otherwise you may (conditionally) see errors like below:
+
+<details><summary>Error example</summary>
+
+```
+(node:25435) ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25476) ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25470) ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ FAIL  src/square42.test.ts
+  ● Test suite failed to run
+
+    ReferenceError: exports is not defined
+
+      1 | import { square42 } from "./square42.js";
+    > 2 |
+        | ^
+      3 | describe("square42", () => {
+      4 |   it("returns 1764", () => {
+      5 |     expect(square42()).toBe(1764);
+
+      at square42.test.ts:2:23
+
+ FAIL  src/square.test.ts
+  ● Test suite failed to run
+
+    ReferenceError: exports is not defined
+
+      1 | import { square } from "./square.js";
+    > 2 |
+        | ^
+      3 | describe("square", () => {
+      4 |   it("squares the number", () => {
+      5 |     expect(square(42)).toBe(1764);
+
+      at square.test.ts:2:23
+
+Test Suites: 2 failed, 2 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        4.113 s
+Ran all test suites.
+```
+
+</details>

@@ -29,9 +29,6 @@ jobs:
     - name: Test ts-node
       run: yarn start-ts-node
     - name: Test ts-jest
-      # For now, "yarn test-ts" emits "ReferenceError: exports is not defined" error.
-      run: |
-        yarn test-ts src/square.test.ts
-        yarn test-ts src/square42.test.ts
+      run: yarn test-ts
     - name: Test babel-jest
       run: yarn test-babel

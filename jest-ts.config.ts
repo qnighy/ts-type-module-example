@@ -9,4 +9,9 @@ export default {
     "^(.*)\\.js$": "$1",
   },
   rootDir: "./src",
+  globals: {
+    "ts-jest": {
+      useESM: true,
+    },
+  },
 };
